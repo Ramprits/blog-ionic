@@ -3,14 +3,20 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "baseUrl": "src",
+    "paths": {
+      "@app/*": ["app/*"],
+      "@api/*": ["app/api/*"],
+      "@shared/*": ["app/shared/*"],
+      "@env/*": ["environments/*"]
+    },
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
-    "lib": [
-      "es2017",
-      "dom"
-    ]
+    "lib": ["es2017", "dom"]
   }
 }

@@ -6,13 +6,14 @@ import { RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { PostPage } from './post.page';
-
+import { SharedModule } from '@app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    SharedModule,
     RouterModule.forChild([{ path: '', component: PostPage }])
   ],
   declarations: [PostPage]
